@@ -2,6 +2,8 @@ FROM seansummers/alpine-java:latest
 
 WORKDIR /opt
 
+RUN apk.static add curl
+
 ADD https://github.com/dweinstein/analysis-runner/archive/master.zip /tmp/analysis-runner.zip
 RUN unzip /tmp/analysis-runner.zip && \
     mv analysis-runner-master runner && \
